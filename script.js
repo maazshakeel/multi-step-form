@@ -12,6 +12,13 @@ const navigateToFormStep = (stepNumber) => {
   /**
    * Mark all form steps as unfinished.
    */
+  document.querySelectorAll(".form-stepper-list").forEach((formStepHeader) => {
+    formStepHeader.classList.add("form-stepper-unfinished");
+    formStepHeader.classList.remove(
+      "form-stepper-active",
+      "form-stepper-completed",
+    );
+  });
   /**
    * Show the current form step (as passed to the function).
    */

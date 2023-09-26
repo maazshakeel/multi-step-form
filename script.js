@@ -32,6 +32,11 @@ const navigateToFormStep = (stepNumber) => {
   /**
    * Mark the current form step as active.
    */
+  formStepCircle.classList.remove(
+    "form-stepper-unfinished",
+    "form-stepper-completed",
+  );
+  formStepCircle.classList.add("form-stepper-active");
   /**
    * Loop through each form step circles.
    * This loop will continue up to the current step number.

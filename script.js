@@ -67,3 +67,22 @@ const navigateToFormStep = (stepNumber) => {
 /**
  * Select all form navigation buttons, and loop through them.
  */
+document
+  .querySelectorAll(".btn-navigate-form-step")
+  .forEach((formNavigationBtn) => {
+    /**
+     * Add a click event listener to the button.
+     */
+    formNavigationBtn.addEventListener("click", () => {
+      /**
+       * Get the value of the step.
+       */
+      const stepNumber = parseInt(
+        formNavigationBtn.getAttribute("step_number"),
+      );
+      /**
+       * Call the function to navigate to the target form step.
+       */
+      navigateToFormStep(stepNumber);
+    });
+  });

@@ -26,6 +26,9 @@ const navigateToFormStep = (stepNumber) => {
   /**
    * Select the form step circle (progress bar).
    */
+  const formStepCircle = document.querySelector(
+    'li[step="' + stepNumber + '"]',
+  );
   /**
    * Mark the current form step as active.
    */

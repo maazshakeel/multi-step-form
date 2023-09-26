@@ -43,6 +43,25 @@ const navigateToFormStep = (stepNumber) => {
    * Example: If the current step is 3,
    * then the loop will perform operations for step 1 and 2.
    */
+  for (let index = 0; index < stepNumber; index++) {
+    /**
+     * Select the form step circle (progress bar).
+     */
+    const formStepCircle = document.querySelector('li[step="' + index + '"]');
+    /**
+     * Check if the element exist. If yes, then proceed.
+     */
+    if (formStepCircle) {
+      /**
+       * Mark the form step as completed.
+       */
+      formStepCircle.classList.remove(
+        "form-stepper-unfinished",
+        "form-stepper-active",
+      );
+      formStepCircle.classList.add("form-stepper-completed");
+    }
+  }
 };
 
 /**
